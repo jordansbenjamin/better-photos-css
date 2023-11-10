@@ -7,6 +7,31 @@
 	box-sizing: border-box;
 }
 
+/* REMOVING DEFAULT STYLE OF CERTAIN ELEMENTS */
+
+input {
+	/* input doesnt inherit font */
+	font: inherit;
+	border: none;
+}
+
+button {
+	border: none;
+	background-color: initial;
+	/* it will remove focus state, so dont 
+	forget to add indicator for focus state*/
+	outline: none;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
 /* BASE STYLES */
 .page {
 	font-family: "Poppins", sans-serif;
@@ -41,6 +66,85 @@
 .header {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
+
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	margin-left: 26px;
+	margin-right: 48px;
+}
+
+.search {
+	position: relative;
+}
+
+.search__input {
+	background-color: #EEF3F4;
+	height: 34px;
+	width: 405px;
+	border-radius: 500px;
+	font-size: 13px;
+	color: #555A5B;
+	padding-left: 20px;
+	outline: none;
+	transition: all 0.2s;
+}
+
+.search__input:focus {
+	width: 425px;
+}
+
+.search__input::placeholder {
+	color: #A9B4B7;
+}
+
+.search__submit {
+	font-size: 15px;
+	color: #A9B4B7;
+	cursor: pointer;
+	transition: all 0.2s;
+	position: absolute;
+	right: 13px;
+	top: 8px;
+}
+
+.search__submit:focus {
+	color: #555A5B
+}
+
+.search__icon {}
+
+.nav {
+	margin-left: auto;
+}
+
+.nav__list {
+	display: flex;
+}
+
+.nav__item {}
+
+.nav__link {
+	padding: 0 20px;
+	transition: all 0.2s;
+	/* anchor tags are inline level elements */
+	/* so have to change to block to add height */
+	display: block;
+	height: 65px;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+	background-color: #EEF3F4;
+}
+
+.nav__icon {
+	color: #A9B4B7;
+	font-size: 22px;
+	/* to re-center links */
+	line-height: 65px;
 }
 
 .sidebar {
