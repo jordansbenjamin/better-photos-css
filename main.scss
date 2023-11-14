@@ -329,6 +329,28 @@ a {
 	}
 }
 
+.footer {
+	padding-top: 50px;
+	padding-left: 35px;
+	// child elements will inherit size and color
+	font-size: 11px;
+	color: rgba($color-grey-medium, 0.6);
+	&__list {
+		display: flex;
+		column-gap: 15px;
+		margin-top: 10px;
+	}
+
+	&__item {}
+
+	&__link {}
+}
+
+// have to force small tag to inherit (doesnt inherit parent by default)
+.copyright {
+	font-size: inherit;
+}
+
 // -----------------------
 
 .gallery {
